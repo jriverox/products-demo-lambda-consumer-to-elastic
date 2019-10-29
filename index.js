@@ -6,7 +6,7 @@ exports.handler = async (event, context) => {
     const client = new elasticsearch.Client({
         host: config.elasticsearch.url,
         log: 'trace'
-        });
+    });
     
     //Leer los mensajes tomados desde la cola en sqs
     for (const record of event.Records) {
